@@ -1,0 +1,85 @@
+*,::before,::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*----------清空按下去的高亮状态------------------*/
+   -webkit-tap-highlight-color: transparent;
+}
+textarea,input{
+    border:none;
+    /*-----------针对iOS系统去除立体效果-------------------------*/
+    -webkit-appearance: none;
+    outline:none;
+}
+body{
+    font-family:"Segoe Print" ,"Microsoft JhengHei";
+    font-size: 13px;
+}
+
+.clearfix::before,
+.chearfix::after{
+    content: ' ';
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+/*---表示以icon开头的类名-----*/
+[class^='icon-']{
+    background:url('../images/home/nav/sprites.png') no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
+}
+a{
+    text-decoration: none;
+    color:#999;
+}
+
+/*-------头部样式抽取-----------------------*/
+.header{
+    width: 100%;
+    height: 44px;
+    background: url('../images/category/header/header-bg.png');
+    border-bottom:1px solid #e0e0e0;
+    -webkit-background-size:1px 44px;
+    background-size:1px 44px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header a{
+    width: 40px;
+    height: 44px;
+    padding:11px 10px;
+
+    /*---从内容开始定位-------*/
+    background-origin:content-box;
+    /*---从内容开始显示-------*/
+    background-clip:content-box;
+    position: absolute;
+    top: 0;
+
+}
+.header .icon-back{
+    left: 0;
+    background-position: -21px 0;
+}
+.header .icon-menu{
+    /* position: absolute;
+     top: 0;*/
+    right: 0;
+    background-position: -60px 0;
+}
+/*---输入框--------*/
+.header form{
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.header input{
+    width: 100%;
+    height: 34px;
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+    padding-left: 8px;
+}

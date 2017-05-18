@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>4.封装tap事件</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #5fe1ff;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    //获取标签
+    var box = document.querySelector('.box');
+    //设置tap事件的规则，手指按下抬起中间没有移动，并且的话是按下和抬起之间差小于等于200ms
+    var startTime = 0;
+    var endTime = 0;
+
+    //false是没有移动，true是移动
+    var isMove = false;
+    box.addEventListener('touchstart',function(){
+        //获取当前的时间
+        startTime = Date.now();
+    });
+    box.addEventListener('touchmove',function(){
+        isMove = true;
+    });
+    box.addEventListener('touchend',function(){
+        endTime = Date.now();
+        var del = endTime - startTime;
+        //做出判断
+        if(del<=200 && isMove == false){
+            console.log('产生了tap事件');
+        }
+        isMove = false;
+    });
+</script>
+</body>
+</html>

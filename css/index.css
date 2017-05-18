@@ -1,0 +1,366 @@
+
+
+body{
+    background-color: #f5f5f5;
+}
+/*---------顶端头部样式-------------*/
+.box{
+   min-width: 300px;
+   max-width: 640px;
+    /*height: 3000px;*/
+    margin:0 auto 65px;
+    /*background-color: #ffc4b5;*/
+    position: relative;
+}
+.box .jd-header{
+    width: 100%;
+    height: 44px;
+    /*background-color: #ff3d46;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.box .jd-header .jd-header-box{
+    height: 44px;
+    /*background-color: #ad1420;*/
+    /*------设置导航条背景颜色透明-----------*/
+    background: transparent;
+    max-width: 640px;
+    min-width: 300px;
+    margin:0 auto;
+    position: relative;
+}
+.box .jd-header .jd-header-box .icon-logo{
+    background-position: 0 -103px;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 7px;
+    left: 8px;
+}
+.box .jd-header .jd-header-box form a{
+    font-size: 16px;
+    color:#fff;
+    line-height: 44px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.box .jd-header .jd-header-box form{
+    width: 100%;
+    height: 100%;
+    /*background-color: #80a9ff;*/
+    padding-left: 70px;
+    padding-right: 50px;
+}
+.box .jd-header .jd-header-box form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 7px;
+    padding-left: 30px;
+}
+.box .jd-header .jd-header-box form .icon-search{
+    background-position: -60px -109px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 77px;
+    top: 12px;
+}
+
+/*-------------轮播图的样式------------------*/
+.box .jd-banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.box .jd-banner ul{
+    width: 1000%;
+    transform: translateX(-10%);
+}
+.box .jd-banner ul li{
+    float: left;
+    width: 10%;
+}
+.box .jd-banner ul li img{
+    width: 100%;
+}
+.box .jd-banner ol{
+    width: 160px;
+    height: 10px;
+    /*background-color: #7835ff;*/
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -80px;
+}
+.box .jd-banner ol li{
+    width: 6px;
+    height: 6px;
+    border-radius:3px;
+    border: 1px solid #fff;
+    float: left;
+    margin-left: 10px;
+}
+.box .jd-banner ol li.current{
+    background-color: #fff;
+}
+
+/*------------导航部分的样式--------------------*/
+.box .jd-nav{
+    width: 100%;
+    background-color: #fff;
+}
+.box .jd-nav section{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+
+}
+.box .jd-nav section ul{
+    width: 100%;
+}
+.box .jd-nav section ul li{
+    width: 20%;
+    float: left;
+}
+.box .jd-nav section ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color:#666;
+}
+.box .jd-nav section ul li a img{
+    width: 40px;
+}
+
+/*----------商品列表的样式-----------------*/
+.jd-product{
+    width: 100%;
+
+}
+.jd-product section{
+    width: 98%;
+    margin:15px auto 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+}
+.jd-product section .jd-product-title{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+/* -----京东乐购的标题样式------*/
+.jd-product section .jd-product-title p{
+    width: 100%;
+    padding-left: 15px;
+}
+.jd-product section .jd-product-title>span{
+    font-size: 12px;
+}
+.jd-product section .jd-product-title img {
+    width: 60px;
+    margin-top: 3px;
+    float: left;
+    margin-right: 5px;
+}
+/*------商品列表标题前面的红色小竖条的样式---------*/
+.jd-product section .jd-product-title p::before{
+    content: '';
+    width: 3px;
+    height: 20px;
+    background-color: #E9232c;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.jd-product section .jd-product-title .jd-product-time{
+    display: inline-block;
+}
+.jd-product section .jd-product-title .jd-product-time span{
+    background-color: #000;
+    color:#fff;
+}
+.jd-product section .jd-product-title .jd-product-time span:nth-of-type(3n){
+    background-color: #fff;
+    color:#000;
+}
+.jd-product section .jd-product-title a{
+    float: right;
+    margin-right: 25px;
+    color:#E9232c;
+}
+.jd-product section .jd-product-title a::after{
+    content: '';
+    background:url('../images/home/product/arrow_rt.png') no-repeat;
+    -webkit-background-size:12px 12px;
+    background-size:12px 12px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    right: 8px;
+}
+.jd-product section .jd-product-content{
+    width: 100%;
+}
+.jd-product section .jd-product-content ul{
+    width: 100%;
+}
+.jd-product section .jd-product-content ul li{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+}
+.jd-product section .jd-product-content ul li a{
+    width: 100%;
+    display: block;
+    border-right: 1px solid #ccc;
+}
+.jd-product section .jd-product-content ul li:last-child a{
+    border-right:none;
+}
+.jd-product section .jd-product-content ul li a img{
+    width: 64%;
+}
+.jd-product section .jd-product-content ul li p:nth-of-type(1){
+    color:#E9232c;
+}
+.jd-product section .jd-product-content ul li p:nth-of-type(2){
+    text-decoration: line-through;
+}
+/*------商品列表公共部分的样式----------------*/
+.border-bottom{
+    border-bottom: 1px solid #ccc;
+}
+.w-50{
+    width: 50%;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.border-right{
+     border-right: 1px solid #ccc;
+ }
+.border-left{
+    border-left:1px solid #ccc;
+}
+.w-50-bottom{
+    border-bottom: 1px solid #ccc;
+}
+.w-50 img{
+    width: 100%;
+    vertical-align: top;
+}
+/*----------为你推荐部分的样式---------------------*/
+.jd-commend{
+    width: 100%;
+    margin-top: 20px;
+}
+.jd-commend .jd-commend-title{
+    width: 100%;
+    position: relative;
+    height: 30px;
+}
+.jd-commend .jd-commend-title::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.jd-commend .jd-commend-title p{
+    width:100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+    color:#666;
+}
+
+/*---------为你推荐内容部分的样式---------------*/
+.jd-commend .jd-commend-content{
+    width: 100%;
+    margin-top: 10px;
+}
+.jd-commend .jd-commend-content ul{
+    width: 100%;
+}
+.jd-commend .jd-commend-content ul li{
+    width: 49%;
+    float: left;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    color:#666;
+}
+.jd-commend .jd-commend-content ul li a{
+    width: 100%;
+    display: block;
+}
+.jd-commend .jd-commend-content ul li a img{
+    width: 100%;
+}
+.jd-commend .jd-commend-content ul li:nth-of-type(2n){
+    float: right;
+}
+.jd-commend .jd-commend-content .jd-commend-price span:nth-of-type(1){
+    color:#E9232c;
+}
+.jd-commend .jd-commend-content .jd-commend-price span:nth-of-type(2){
+    float: right;
+    display: block;
+    width: 60px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*----------底部的样式---------------*/
+.jd-footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.jd-footer .jd-footer-box{
+    height: 56px;
+    margin:0 auto;
+    background-color: #fff;
+    box-shadow: 0 -3px 2px #ccc;
+}
+.jd-footer ul{
+    width: 100%;
+}
+.jd-footer ul li{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+.jd-footer ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.jd-footer ul li a img{
+    width: 70px;
+}
+
